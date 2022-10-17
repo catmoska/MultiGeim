@@ -11,6 +11,8 @@ namespace blocDrobitel
         public float radiysDistanses;
         public float mosnast;
 
+        public DynamicJoystick Djast;
+
         private void Start()
         {
             Rb2 = GetComponent<Rigidbody2D>();
@@ -20,8 +22,6 @@ namespace blocDrobitel
         {
             Rb2.isKinematic = !LevelControlir.sig.Geims;
             digasa();
-
-
             Debug.DrawRay(transform.position, Rb2.velocity, Color.blue);
             Debug.DrawRay(posStart.position, (Vector2)(transform.position - posStart.position).normalized * radiysDistanses, Color.black);
         }
@@ -33,10 +33,19 @@ namespace blocDrobitel
                 Rb2.velocity *=0.9f;
                 return;
             }
-            float Xmuv = Input.GetAxis("Horizontal");
-            float Ymuv = Input.GetAxis("Vertical");
+            float Xmuv = diMax(Djast.Horizontal, Input.GetAxis("Horizontal"));
+            float Ymuv = diMax(Djast.Vertical, Input.GetAxis("Vertical"));
+
+
             Rb2.velocity = new Vector2(Xmuv, Ymuv) * Speed;
             mosnast = Mathf.Clamp(Math.Abs(Xmuv) + Math.Abs(Xmuv), 0, 1);
+        }
+
+        public float diMax(float a, float b)
+        {
+            if (Math.Abs(a) > Math.Abs(b))
+                return a;
+            return b;
         }
     }
 }

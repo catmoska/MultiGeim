@@ -7,7 +7,7 @@ namespace blocDrobitel
         public static LevelControlir sig;
 
         [Header("Seves")]
-        public SevesDeta seveD;
+        public seves seveD;
 
         [Header("nola sig")]
         public Moneu mon;
@@ -47,40 +47,38 @@ namespace blocDrobitel
 
         public void Seve()
         {
-            PlayerPrefs.SetInt("blocDrobitel_Level", seveD.Level);
-            PlayerPrefs.SetInt("blocDrobitel_Moneus", seveD.Moneus);
+            //PlayerPrefs.SetInt("blocDrobitel_Level", seveD.Level);
+            //PlayerPrefs.SetInt("blocDrobitel_Moneus", seveD.Moneus);
 
-            PlayerPrefs.SetInt("blocDrobitel_segments", seveD.nroc.segments);
-            PlayerPrefs.SetInt("blocDrobitel_topliva", seveD.nroc.topliva);
-            PlayerPrefs.SetInt("blocDrobitel_power", seveD.nroc.power);
-            PlayerPrefs.SetInt("blocDrobitel_size", seveD.nroc.size);
-            PlayerPrefs.SetInt("blocDrobitel_Conveir", seveD.nroc.Conveir);
-            PlayerPrefs.SetInt("blocDrobitel_MaxTopliva", seveD.nroc.MaxTopliva);
-            PlayerPrefs.SetInt("blocDrobitel_Mnozetell", seveD.nroc.Mnozetell);
+            //PlayerPrefs.SetInt("blocDrobitel_segments", seveD.nroc.segments);
+            //PlayerPrefs.SetInt("blocDrobitel_topliva", seveD.nroc.topliva);
+            //PlayerPrefs.SetInt("blocDrobitel_power", seveD.nroc.power);
+            //PlayerPrefs.SetInt("blocDrobitel_size", seveD.nroc.size);
+            //PlayerPrefs.SetInt("blocDrobitel_Conveir", seveD.nroc.Conveir);
+            //PlayerPrefs.SetInt("blocDrobitel_MaxTopliva", seveD.nroc.MaxTopliva);
+            //PlayerPrefs.SetInt("blocDrobitel_Mnozetell", seveD.nroc.Mnozetell);
         }
 
         public void RSeve()
         {
-            seveD.def();
-            if (!PlayerPrefs.HasKey("blocDrobitel_seve"))
-            {
-                PlayerPrefs.SetInt("blocDrobitel_seve", 10);
-                seveD.defFull();
-                return;
-            }
+            //seveD.def();
+            //if (!PlayerPrefs.HasKey("blocDrobitel_seve"))
+            //{
+            //    PlayerPrefs.SetInt("blocDrobitel_seve", 10);
+            //    seveD.defFull();
+            //    return;
+            //}
 
-            if (PlayerPrefs.HasKey("blocDrobitel_Level")) seveD.Level = PlayerPrefs.GetInt("blocDrobitel_Level");
-            if (PlayerPrefs.HasKey("blocDrobitel_Moneus")) seveD.Moneus = PlayerPrefs.GetInt("blocDrobitel_Moneus");
+            //if (PlayerPrefs.HasKey("blocDrobitel_Level")) seveD.Level = PlayerPrefs.GetInt("blocDrobitel_Level");
+            //if (PlayerPrefs.HasKey("blocDrobitel_Moneus")) seveD.Moneus = PlayerPrefs.GetInt("blocDrobitel_Moneus");
 
-
-
-            if (PlayerPrefs.HasKey("blocDrobitel_segments")) seveD.nroc.segments = PlayerPrefs.GetInt("blocDrobitel_segments");
-            if (PlayerPrefs.HasKey("blocDrobitel_topliva")) seveD.nroc.topliva = PlayerPrefs.GetInt("blocDrobitel_topliva");
-            if (PlayerPrefs.HasKey("blocDrobitel_power")) seveD.nroc.power = PlayerPrefs.GetInt("blocDrobitel_power");
-            if (PlayerPrefs.HasKey("blocDrobitel_size")) seveD.nroc.size = PlayerPrefs.GetInt("blocDrobitel_size");
-            if (PlayerPrefs.HasKey("blocDrobitel_Conveir")) seveD.nroc.Conveir = PlayerPrefs.GetInt("blocDrobitel_Conveir");
-            if (PlayerPrefs.HasKey("blocDrobitel_MaxTopliva")) seveD.nroc.MaxTopliva = PlayerPrefs.GetInt("blocDrobitel_MaxTopliva");
-            if (PlayerPrefs.HasKey("blocDrobitel_Mnozetell")) seveD.nroc.Mnozetell = PlayerPrefs.GetInt("blocDrobitel_Mnozetell");
+            //if (PlayerPrefs.HasKey("blocDrobitel_segments")) seveD.nroc.segments = PlayerPrefs.GetInt("blocDrobitel_segments");
+            //if (PlayerPrefs.HasKey("blocDrobitel_topliva")) seveD.nroc.topliva = PlayerPrefs.GetInt("blocDrobitel_topliva");
+            //if (PlayerPrefs.HasKey("blocDrobitel_power")) seveD.nroc.power = PlayerPrefs.GetInt("blocDrobitel_power");
+            //if (PlayerPrefs.HasKey("blocDrobitel_size")) seveD.nroc.size = PlayerPrefs.GetInt("blocDrobitel_size");
+            //if (PlayerPrefs.HasKey("blocDrobitel_Conveir")) seveD.nroc.Conveir = PlayerPrefs.GetInt("blocDrobitel_Conveir");
+            //if (PlayerPrefs.HasKey("blocDrobitel_MaxTopliva")) seveD.nroc.MaxTopliva = PlayerPrefs.GetInt("blocDrobitel_MaxTopliva");
+            //if (PlayerPrefs.HasKey("blocDrobitel_Mnozetell")) seveD.nroc.Mnozetell = PlayerPrefs.GetInt("blocDrobitel_Mnozetell");
         }
 
         private void OnDestroy()

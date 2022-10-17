@@ -1,6 +1,9 @@
 using System;
 using UnityEngine;
 
+using System.IO;
+using UnityEditor.Presets;
+
 public class colorMatirialGet : MonoBehaviour
 {
     public static colorMatirialGet sig;
@@ -68,9 +71,15 @@ public class colorMatirialGet : MonoBehaviour
 
         int podsot= ((R * 36) + (G * 6) + (B));
         if (materls.Length <= podsot)
-            return materls[materls.Length-1];
-        return materls[podsot];
+            return GetMat(materls.Length-1);
+        return GetMat(podsot);
     }
 
-
+    public Material GetMat(int id)
+    {
+        if (materls[id])
+            return materls[id];
+        materls[id] = Resources.Load<Material>("materials 6/mat "+(id+1));
+        return materls[id];
+    }
 }

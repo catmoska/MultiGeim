@@ -14,13 +14,13 @@ namespace blocDrobitel
 
         private void Update()
         {
-            if(GeimsNrosli != LevelControlir.sig.Geims) 
+            updeitBox();
+            updeitToplivo();
+            if (GeimsNrosli != LevelControlir.sig.Geims)
             {
                 zarabotoc = LevelControlir.sig.seveD.Moneus;
                 GeimsNrosli = LevelControlir.sig.Geims;
             }
-            updeitBox();
-            updeitToplivo();
         }
 
         public void updeitBox()
